@@ -53,4 +53,4 @@ serviceSchema.set('toJSON', {
 });
 
 
-exports.Service = mongoose.model('Service', productSchema);
+exports.Service = mongoose.model('Service', serviceSchema);

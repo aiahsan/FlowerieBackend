@@ -92,7 +92,7 @@ router.delete('/:id', async (req, res)=>{
  
 router.put(
     '/gallery-images/:id', 
-    uploadOptions.array('images', 10), 
+    uploadOptions('uploads/services').array('images', 10), 
     async (req, res)=> {
         if(!mongoose.isValidObjectId(req.params.id)) {
             return  res.status(400).json(response(false,"Invalid service Id",{}))
