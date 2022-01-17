@@ -23,6 +23,8 @@ app.use(errorHandler);
 const categoriesRoutes = require('./routes/categories');
 const servicesRoutes = require('./routes/services');
 const usersRoutes = require('./routes/users');
+const vouchersRoutes = require('./routes/voucher');
+const commissionsRoutes = require('./routes/commission');
 const bookingsRoutes = require('./routes/bookings');
 
 const api = process.env.API_URL;
@@ -31,6 +33,8 @@ app.use(`${api}/categories`, categoriesRoutes);
 app.use(`${api}/services`, servicesRoutes);
 app.use(`${api}/users`, usersRoutes);
 app.use(`${api}/bookings`, bookingsRoutes);
+app.use(`${api}/commissions`, commissionsRoutes);
+app.use(`${api}/vouchers`, vouchersRoutes);
 
 //Database
 mongoose.connect(process.env.CONNECTION_STRING, {
